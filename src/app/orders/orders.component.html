@@ -1,0 +1,63 @@
+
+    <header class="header">
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-xl-3 col-lg-2">
+        <div class="header__logo">
+        <a href="#"><img src="../assets/img/logo.png" alt=""></a>
+        </div>
+        </div>
+        <div class="col-xl-6 col-lg-7">
+        <nav class="header__menu">
+        <ul>
+        <li class="active"><a href="../../">Home</a></li>
+        <!-- <li>  <a href="#">Login</a> </li>
+        <li> <a href="#">Register</a></li> -->
+        </ul>
+        </nav>
+        </div>
+    </div>
+        <div class="canvas__open">
+        <i class="fa fa-bars"></i>
+        </div>
+        </div>
+        
+        </header>
+<section class="product spad">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-4 col-md-4">
+    <div class="section-title">
+    <h4>Order products</h4>
+    </div>
+    </div>
+    <div class="col-lg-8 col-md-8">
+    </div>
+    </div>
+    <div class="row property__gallery" >     
+    <div class="col-lg-3 col-md-4 col-sm-6 mix"  *ngFor="let or of orders">
+    <div class="product__item">
+    <div class="product__item__pic" style.background-image='url({{or.product_id.image}})'>
+    <div class="label new">New</div>
+    <ul class="product__hover">
+    <li><a href="{{or.product_id.image}}" class="image-popup"><span class="arrow_expand"></span></a></li>
+    
+    <li><a href="#"><span class="icon_heart_alt"></span></a></li>
+   <li><a (click)="onDeleteOrder(or.id)">&#xe019; </a></li>
+    <!-- <li><a (click)="AddToOrder(pro..id)"><span class="icon_bag_alt"></span></a></li> -->
+    </ul>
+    </div>
+    <div class="product__item__text">
+    <h6><a href="#">{{or.product_id.name}}</a></h6>
+    <div class="rating">
+    <!-- <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i> -->
+    <button (click)="AddToPayments(or.id,or.product_id.price)" >CheckOut</button>
+    </div>
+    <div class="product__price">$ {{or.product_id.price}}</div>
+    </div>
+    </div>
+    </div>

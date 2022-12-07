@@ -1,0 +1,22 @@
+<div class="container col-lg-6">
+    <h1 class="text-center">Login</h1>
+    <div class="card">
+      <div class="card-body">
+        <form class="form-group" (ngSubmit)="userLogin()">
+          <!-- <div class="alert alert-warning" ></div>
+          <div class="alert alert-success" ></div> -->
+          <div class="form-group">
+            <label for="username">User Name :</label>
+            <input type="text" [(ngModel)]="user.username" class="form-control" id="username"  placeholder="Enter User Name"
+              name="username">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password"[(ngModel)]="user.password" class="form-control"  id="password" placeholder="Enter password"
+              name="password">
+          </div>
+          <button type="submit" class="btn btn-success">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,33 @@
+<div class="container col-lg-6">
+    <h1 class="text-center">Products Addition</h1>
+    <div class="card">
+      <div class="card-body">
+        <form class="form-group" (ngSubmit)="AddToProducts()">
+    
+          <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="text" class="form-control" id="price" name="price" [(ngModel)]="products.price" placeholder="enter the Price">
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="name" name="name" [(ngModel)]="products.name" placeholder="enter the product name">
+            </div>
+            <div class="mb-3">
+              <label for="category" class="form-label">Category</label>
+              <input type="text" class="form-control" id="category" name="category" [(ngModel)]="products.category" placeholder="enter the category of the product">
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <input type="text" class="form-control" id="description"name="description" [(ngModel)]="products.description" placeholder="enter the description">
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <input type="text" class="form-control" id="image" name="image" [(ngModel)]="products.image" placeholder="enter the image url">
+            </div>
+          
+            <button type="submit" class="btn btn-primary" >Add</button>
+  
+          </form>
+  </div></div>
+  </div>
+  
